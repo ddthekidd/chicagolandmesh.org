@@ -104,7 +104,7 @@ build/map: build/map/js build/map/css build/map/assets
 
 venv/bin/activate:
 	@echo 'Setting up virtual python environment...'
-	python -m venv venv \
+	python3 -m venv venv \
 	&& . venv/bin/activate \
 	&& pip install mkdocs-material mkdocs-glightbox mkdocs-minify-plugin
 
