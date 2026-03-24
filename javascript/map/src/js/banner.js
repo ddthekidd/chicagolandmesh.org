@@ -28,10 +28,16 @@ export function addBanner(header, text, options) {
   banner.style.backgroundColor = color || "";
   banner.style.boxShadow = color && `0 0 0 2px ${color}59`;
 
-  banner.innerHTML = `
-    <p><b>${header}</b></p>
-    <p>${text}</p>
-  `;
+  const headerEl = document.createElement('p');
+  const headerBoldEl = document.createElement('b');
+  headerBoldEl.textContent = header;
+  headerEl.appendChild(headerBoldEl);
+
+  const textEl = document.createElement('p');
+  textEl.textContent = text;
+
+  banner.appendChild(headerEl);
+  banner.appendChild(textEl);
 
   if (close) {
     const closeButton = document.createElement("button");
