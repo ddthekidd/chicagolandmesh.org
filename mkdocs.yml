@@ -27,7 +27,7 @@ nav:
   - MeshView:
     - meshview/index.md
     - Nodes: meshview/nodelist.md
-    - Conversations: meshview/chat.md
+    - Map: meshview/map.md
     - See everything: meshview/firehose.md
     - Graph: meshview/nodegraph.md
     - Stats: meshview/stats.md
