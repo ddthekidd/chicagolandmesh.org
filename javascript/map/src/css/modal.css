@@ -47,10 +47,8 @@
   padding: 0.25rem;
 }
 .hidden {
-  opacity: 0 !important;
-}
-.under {
-  z-index: -1 !important;
+  opacity: 0;
+  pointer-events: none;
 }
 .form-text {
   margin-top: 0.25rem;

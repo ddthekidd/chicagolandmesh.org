@@ -599,17 +599,9 @@ export class NodeManager {
     form.querySelector("input[name='privacy']").checked = node.owner.privacy;
 
     modal.classList.remove("hidden");
-    modal.classList.remove("under");
 
     function closeModal(modal) {
       modal.classList.add("hidden");
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        modal.classList.add("under");
-      } else {
-        modal.addEventListener("transitionend", () => {
-          modal.classList.add("under");
-        }, { once: true });
-      }
     }
 
     form.addEventListener("submit", (e) => {

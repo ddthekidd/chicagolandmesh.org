@@ -449,20 +449,11 @@ class NodeManagerControl {
     }
     latitude.value = lat;
 
-    this._formModal.classList.remove("under");
     this._formModal.classList.remove("hidden");
   }
 
   _hideNodeForm = () => {
     this._formModal.classList.add("hidden");
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      this._formModal.classList.add("under");
-    } else {
-      this._formModal.addEventListener("transitionend", () => {
-        this._formModal.classList.add("under");
-      }, { once: true });
-    }
-
     this._form.removeEventListener("submit", this._submitNodeForm);
     this._formCloseButton.removeEventListener("click", this._hideNodeForm);
   }
