@@ -26,7 +26,7 @@ func loadConfig() (*config, error) {
 
 	flag.StringVar(&config.addr, "addr", getEnv("ADDR", ":8080"), "http server address")
 	flag.StringVar(&config.logPath, "log-path", os.Getenv("LOG_PATH"), "path to save log files. will not save if empty")
-	flag.StringVar(&config.dsn, "dsn", getEnv("DSN", "/data/data.db"), "sqlite3 dsn address")
+	flag.StringVar(&config.dsn, "dsn", os.Getenv("DSN"), "sqlite3 dsn address")
 	flag.BoolVar(&config.secure, "secure", getBoolEnv("SECURE", true), "will set all cookies secure flag")
 	flag.StringVar(&config.tokenSecret, "token-secret", os.Getenv("TOKEN_SECRET"), "jwt token private key")
 	flag.StringVar(&config.mapURL, "map-url", getEnv("MAP_URL", "/map/"), "location of frontend map")
@@ -36,6 +36,9 @@ func loadConfig() (*config, error) {
 	flag.Parse()
 
 	var missingFields []string
+	if config.dsn == "" {
+		missingFields = append(missingFields, "dsn")
+	}
 	if config.tokenSecret == "" {
 		missingFields = append(missingFields, "token-secret")
 	}

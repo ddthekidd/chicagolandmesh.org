@@ -31,6 +31,7 @@ services:
       - ./data:/data
       - ./logs:/logs
     environment:
+      - DSN=/data/data.db
       - LOG_PATH=/logs/api.log
       - TOKEN_SECRET=${TOKEN_SECRET}
       - CLIENT_ID=${DISCORD_CLIENT_ID}
