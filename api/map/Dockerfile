@@ -8,7 +8,7 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 COPY . .
-RUN CGO_ENABLED=1 go build -o ./bin/api ./cmd/server
+RUN CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -o ./bin/api ./cmd/server
 
 
 FROM alpine
