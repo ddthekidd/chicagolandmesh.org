@@ -44,15 +44,11 @@ SITE_OUTPUT := dist
 
 $(MAP_MIDWEST_PM) $(MAP_GLOBE_PM):
 	@echo 'Pulling map tiles...'
-	@tmp=$$(mktemp -d) && \
-	pmtiles=$$(curl -s https://api.github.com/repos/protomaps/go-pmtiles/releases/latest | jq -r '.assets[] | select(.name | test("Linux_x86_64")) | .browser_download_url') && \
-	curl -L -o $$tmp/pmtiles.tar.gz $$pmtiles && \
-	tar -xzf $$tmp/pmtiles.tar.gz -C $$tmp && \
-	mapfile=$$(curl -s https://build-metadata.protomaps.dev/builds.json | jq -r '.[-1] | .key') && \
-	mkdir -p $(MAP_TILES_DIR) && \
-	$$tmp/pmtiles extract https://build.protomaps.com/$$mapfile $(MAP_MIDWEST_PM) --bbox=$(BOTTOM_LEFT_LNGLAT),$(TOP_RIGHT_LNGLAT) && \
-	$$tmp/pmtiles extract https://build.protomaps.com/$$mapfile $(MAP_GLOBE_PM) --maxzoom=7 && \
-	rm -rf $$tmp
+	@go install github.com/protomaps/go-pmtiles@latest
+	@mkdir -p $(MAP_TILES_DIR)
+	@mapfile=$$(curl -s https://build-metadata.protomaps.dev/builds.json | jq -r '.[-1] | .key') && \
+	go-pmtiles extract https://build.protomaps.com/$$mapfile $(MAP_MIDWEST_PM) --bbox=$(BOTTOM_LEFT_LNGLAT),$(TOP_RIGHT_LNGLAT) && \
+	go-pmtiles extract https://build.protomaps.com/$$mapfile $(MAP_GLOBE_PM) --maxzoom=7
 
 .PHONY: build/pmtiles
 build/pmtiles: $(MAP_MIDWEST_PM) $(MAP_GLOBE_PM)
