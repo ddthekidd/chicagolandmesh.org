@@ -18,7 +18,7 @@ type config struct {
 	clientID     string
 	clientSecret string
 	redirectURL  string
-	authURL      string
+	authURL      url.URL
 }
 
 func loadConfig() (*config, error) {
@@ -29,7 +29,7 @@ func loadConfig() (*config, error) {
 	flag.StringVar(&config.dsn, "dsn", getEnv("DSN", "/data/data.db"), "sqlite3 dsn address")
 	flag.BoolVar(&config.secure, "secure", getBoolEnv("SECURE", true), "will set all cookies secure flag")
 	flag.StringVar(&config.tokenSecret, "token-secret", os.Getenv("TOKEN_SECRET"), "jwt token private key")
-	flag.StringVar(&config.mapURL, "map-url", getEnv("MAP_URL", "/map"), "location of frontend map")
+	flag.StringVar(&config.mapURL, "map-url", getEnv("MAP_URL", "/map/"), "location of frontend map")
 	flag.StringVar(&config.clientID, "client-id", os.Getenv("CLIENT_ID"), "discord oauth client id")
 	flag.StringVar(&config.clientSecret, "client-secret", os.Getenv("CLIENT_SECRET"), "discord oauth client secret")
 	flag.StringVar(&config.redirectURL, "redirect-url", os.Getenv("REDIRECT_URL"), "discord oauth redirect url")
@@ -55,13 +55,18 @@ func loadConfig() (*config, error) {
 		return nil, fmt.Errorf("missing required configuration: %s", strings.Join(missingFields, ", "))
 	}
 
+	authURL, err := url.Parse("https://discord.com/api/oauth2/authorize")
+	if err != nil {
+		return nil, fmt.Errorf("failed to parse discord auth url: %w", err)
+	}
+	config.authURL = *authURL
+
 	q := url.Values{}
 	q.Add("client_id", config.clientID)
 	q.Add("redirect_uri", config.redirectURL)
 	q.Add("response_type", "code")
 	q.Add("scope", "identify")
-
-	config.authURL = "https://discord.com/api/oauth2/authorize?" + q.Encode()
+	config.authURL.RawQuery = q.Encode()
 
 	return config, nil
 }

@@ -13,7 +13,22 @@ func (server *server) loginHandler(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, server.config.mapURL, http.StatusFound)
 		return
 	}
-	http.Redirect(w, r, server.config.authURL, http.StatusFound)
+
+	state := generateNonce(32)
+
+	http.SetCookie(w, &http.Cookie{
+		Name:     "state",
+		Value:    state,
+		Path:     "/api/",
+		MaxAge:   10 * 60,
+		Expires:  time.Now().Add(10 * time.Minute),
+		HttpOnly: true,
+		Secure:   server.config.secure,
+		SameSite: http.SameSiteLaxMode,
+	})
+
+	authURL := addQueryParam(server.config.authURL, "state", state)
+	http.Redirect(w, r, authURL.String(), http.StatusFound)
 }
 
 func (server *server) logoutHandler(w http.ResponseWriter, r *http.Request) {

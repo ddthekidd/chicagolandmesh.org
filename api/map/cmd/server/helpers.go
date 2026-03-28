@@ -1,6 +1,8 @@
 package main
 
 import (
+	"crypto/rand"
+	"encoding/base64"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -41,6 +43,13 @@ func getBoolEnv(key string, defaultValue bool) bool {
 	return defaultValue
 }
 
+func addQueryParam(base url.URL, key string, val string) url.URL {
+	q := base.Query()
+	q.Set(key, val)
+	base.RawQuery = q.Encode()
+	return base
+}
+
 func addQueryParams(base string, params map[string]string) (string, error) {
 	u, err := url.Parse(base)
 	if err != nil {
@@ -55,6 +64,12 @@ func addQueryParams(base string, params map[string]string) (string, error) {
 	u.RawQuery = q.Encode()
 
 	return u.String(), nil
+}
+
+func generateNonce(length int) string {
+	buffer := make([]byte, length)
+	rand.Read(buffer)
+	return base64.RawURLEncoding.EncodeToString(buffer)
 }
 
 func getLogEntry(logger *log.Logger, level log.Level) *log.Entry {

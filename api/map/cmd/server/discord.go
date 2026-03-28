@@ -14,17 +14,36 @@ import (
 )
 
 func (server *server) discordCallbackHandler(w http.ResponseWriter, r *http.Request) {
-	if err := r.URL.Query().Get("error"); err != "" {
+	if discordErr := r.URL.Query().Get("error"); discordErr != "" {
 		server.redirectDiscordError(w, r, discordError{
-			Err:            err,
+			Err:            discordErr,
 			ErrDescription: r.URL.Query().Get("error_description"),
 		})
 		return
 	}
 
 	code := r.URL.Query().Get("code")
-	if code == "" {
-		clientError(w, http.StatusBadRequest)
+	callbackState := r.URL.Query().Get("state")
+
+	cookieState, err := r.Cookie("state")
+	if err != nil && !errors.Is(err, http.ErrNoCookie) {
+		server.error(w, r, "failed to get state from cookie", err)
+		return
+	}
+
+	if code == "" || callbackState == "" || cookieState == nil || cookieState.Value == "" {
+		server.redirectDiscordError(w, r, discordError{
+			Err:            "invalid_request",
+			ErrDescription: "Request is missing required parameters",
+		})
+		return
+	}
+
+	if callbackState != cookieState.Value {
+		server.redirectDiscordError(w, r, discordError{
+			Err:            "state_mismatch",
+			ErrDescription: "Request did not pass security check",
+		})
 		return
 	}
 
@@ -46,10 +65,10 @@ func (server *server) discordCallbackHandler(w http.ResponseWriter, r *http.Requ
 	}
 
 	_, err = server.users.Insert(models.UserParams{
-		ID:            user.ID,
-		Username:      user.Username,
-		GlobalName:    user.GlobalName,
-		Avatar:        user.Avatar,
+		ID:         user.ID,
+		Username:   user.Username,
+		GlobalName: user.GlobalName,
+		Avatar:     user.Avatar,
 	})
 	if err != nil {
 		server.error(w, r, "failed to insert user", err)
@@ -72,6 +91,16 @@ func (server *server) discordCallbackHandler(w http.ResponseWriter, r *http.Requ
 		HttpOnly: true,
 		Secure:   server.config.secure,
 		SameSite: http.SameSiteStrictMode,
+	})
+	http.SetCookie(w, &http.Cookie{
+		Name:     "state",
+		Value:    "",
+		Path:     "/api/",
+		MaxAge:   -1,
+		Expires:  time.Unix(0, 0),
+		HttpOnly: true,
+		Secure:   server.config.secure,
+		SameSite: http.SameSiteLaxMode,
 	})
 	http.Redirect(w, r, server.config.mapURL, http.StatusSeeOther)
 }
@@ -118,10 +147,10 @@ func getDiscordAccessToken(clientID, clientSecret, redirectURL, code string) (st
 }
 
 type discordUser struct {
-	ID            string `json:"id"`
-	Username      string `json:"username"`
-	GlobalName    string `json:"global_name"`
-	Avatar        string `json:"avatar"`
+	ID         string `json:"id"`
+	Username   string `json:"username"`
+	GlobalName string `json:"global_name"`
+	Avatar     string `json:"avatar"`
 }
 
 func getDiscordUser(accessToken string) (discordUser, error) {
