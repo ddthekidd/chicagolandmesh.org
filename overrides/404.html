@@ -1,7 +1,7 @@
 {% extends "main.html" %}
 
 {% block htmltitle %}
-  <title>Chicagoland Mesh - 404 Not Found</title>
+  <title>404 Not Found - Chicagoland Mesh</title>
 {% endblock %}
 
 {% block styles %}
@@ -12,13 +12,14 @@
         display: none;
       }
     }
-
     .md-content {
       text-align: center;
     }
-
     .md-header--shadow {
-        box-shadow: unset;
+      box-shadow: unset;
+    }
+    .md-sidebar.md-sidebar--secondary {
+      display: none;
     }
   </style>
 {% endblock %}

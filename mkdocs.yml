@@ -85,7 +85,6 @@ theme:
     - navigation.indexes
     - navigation.top
     - navigation.footer
-    - toc.integrate
     - search.suggest
     - search.share
     - announce.dismiss
