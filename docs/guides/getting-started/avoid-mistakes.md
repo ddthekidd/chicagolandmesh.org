@@ -13,6 +13,13 @@ tags:
 #### Mount antennas upright and minimize cable length between the node and antenna.
    Having your antenna in a vertical position at the highest possible level is the best case. Also, small adjustments such as keeping the cable connecting the antenna to the node as short as possible will help. Keeping the cable vertical and not bent will ensure you get the best connection possible; antennas with a hinge typically perform worse while bent.
 
+<style>
+  .glightbox {
+    display: block;
+    margin: 1em;
+  }
+</style>
+
 #### Avoid sketchy batteries
    [18650 Batteries](https://en.wikipedia.org/wiki/18650_battery) are very common in Meshtastic builds for their large capacity and rechargability. They are lithium-ion batteries first created for use in laptops. Many fake or misleading manufacturers will sell batteries that are way above their capacity. Stick to name brands like *Samsung* or *Panasonic*. A big hint that a battery is fake is if the weight is under 40 grams.
    ![Fake 18650 Batteries](../../assets/images/batteries.png)
