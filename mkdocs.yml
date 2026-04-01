@@ -75,6 +75,7 @@ theme:
   logo: "assets/images/logo-clear.svg"
   favicon: "assets/images/logo-clear.svg"
   features:
+    - content.tooltips
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
