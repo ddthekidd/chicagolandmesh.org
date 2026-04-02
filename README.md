@@ -1,14 +1,10 @@
 # [ChicagolandMesh.org](https://chicagolandmesh.org/)
 
-ChicagolandMesh.org is the official website for the Chicagoland Mesh utilizing
-the Meshtastic open-source mesh networking platform.
+This repository contains the source code for ChicagolandMesh.org, the official website of Chicagoland Mesh.
 
-## About Meshtastic and Chicagoland Mesh
+## About Chicagoland Mesh
 
-This repository contains the source code for ChicagolandMesh.org, the official
-website of Chicagoland Mesh. We use the Meshtastic platform, an open-source mesh
-networking solution, to build decentralized communication networks across the
-Chicagoland area.
+We are a local community interested in decentralized networking technologies, utilizing the [Meshtastic](https://meshtastic.org/), [MeshCore](https://meshcore.co.uk/), and [Reticulum](https://reticulum.network/) open-source mesh networking protocols, to build decentralized communication networks across the Chicagoland area.
 
 ## Contributing
 
@@ -35,8 +31,7 @@ resources. To submit your build guide:
 
 ## Development
 
-Use `make build/site` to build the static site into the `dist` directory and
-`make dev` to start up the development server in docker.
+Use `make build/site` to build the static site into the `dist` directory and `make dev` to start up the development server in docker.
 
 ## License
 
