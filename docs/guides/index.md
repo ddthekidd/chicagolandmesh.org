@@ -8,15 +8,27 @@ tags:
   - Getting Started
 ---
 
+<style>
+  /* force 2x2 grid */
+  .grid.cards {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  }
+  /* force builds icon size to be slightly larger and aligned properly */
+  .handheld {
+    --md-icon-size: 1.8em !important;
+    vertical-align: bottom !important;
+  }
+</style>
+
 <div class="grid cards" markdown>
 
--   :material-pencil-box-multiple:{ .lg .middle } __Getting Started__
+-   :material-checkbox-multiple-marked-outline:{ .lg .middle } __Getting Started__
 
     ---
 
     Configure your node for the best possible optimizations.
 
-    [:fontawesome-solid-angle-right: Customization](getting-started/index.md)
+    [:fontawesome-solid-angle-right: Customize](getting-started/index.md)
 
 -   :material-radar:{ .lg .middle } __Local MQTT Setup__
 
@@ -35,30 +47,12 @@ tags:
 
     [:fontawesome-solid-angle-right: Setup now](local-channel.md)
 
--   :material-solar-power-variant:{ .lg .middle } __Solar builds__
+-   :material-radio-handheld:{ .lg .handheld } __Builds__
 
     ---
 
-    Solar builds allow for the placement of fixed routers
-    without the need of dedicated power of previous wiring.
+    Check out our community maintained build guides!
 
-    [:fontawesome-solid-angle-right: Get started](builds/solar.md)
-
--   :material-crosshairs-gps:{ .lg .middle } __Fixed builds__
-
-    ---
-
-    Learn how to setup a fixed node for your home or other locations.
-
-    [:fontawesome-solid-angle-right: Jump start](builds/fixed.md)
-
--   :material-cellphone-text:{ .lg .middle } __Mobile builds__
-
-    ---
-
-    Have LoRa communications everywhere you go. Learn how to
-    build enclosures for your mobile nodes.
-
-    [:fontawesome-solid-angle-right: Explore](builds/mobile.md)
+    [:fontawesome-solid-angle-right: Check out](builds/index.md)
 
 </div>

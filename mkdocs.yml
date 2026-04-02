@@ -22,6 +22,7 @@ nav:
     - Local Channel: guides/local-channel.md
     - Builds:
       - guides/builds/index.md
+      - Contributing: guides/builds/contributing.md
   - News: news.md
   - Map: map.md
   - MeshView:
@@ -48,26 +49,27 @@ plugins:
   - glightbox
   - minify:
       minify_html: true
-  # TODO: build guides
-  # - git-authors
-  # - git-revision-date-localized
-  # - blog:
-  #  - blog_dir: guides/builds
-  #  - post_dir:
+  - blog:
+      blog_dir: guides/builds
+      archive: false
 
 markdown_extensions:
-  - md_in_html
-  - attr_list
   - abbr
   - admonition
+  - attr_list
+  - md_in_html
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       options:
         custom_icons:
           - overrides/.icons
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
 
 theme:
   name: "material"
@@ -75,6 +77,9 @@ theme:
   logo: "assets/images/logo-clear.svg"
   favicon: "assets/images/logo-clear.svg"
   features:
+    - announce.dismiss
+    - content.code.copy
+    - content.tabs.link
     - content.tooltips
     - navigation.instant
     - navigation.instant.prefetch
@@ -88,7 +93,6 @@ theme:
     - navigation.footer
     - search.suggest
     - search.share
-    - announce.dismiss
   icon:
     repo: "fontawesome/brands/github"
   palette:

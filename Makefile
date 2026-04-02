@@ -7,6 +7,15 @@ dev: build/pmtiles build/map/assets
 	docker compose up -d
 	docker compose logs -f
 
+# Run the development server without pulling map assets or tiles
+.PHONY: dev/site
+dev/site:
+	@if [[ ! -e ".env" ]]; then cp .example.env .env; fi
+	@mkdir -p docs/assets/javascripts
+	@touch docs/assets/javascripts/map.dev.js
+	@touch docs/assets/stylesheets/map.dev.css
+	docker compose up mkdocs caddy
+
 .PHONY: clean
 clean:
 	docker compose down --rmi local
