@@ -19,15 +19,7 @@ We welcome contributions from the community! To contribute to the website:
 
 ### Submitting Build Guides
 
-We encourage users to submit their Meshtastic build guides as Markdown files.
-These guides should include detailed steps, configurations, and any necessary
-resources. To submit your build guide:
-
-- Create a new Markdown file in the `docs/guides/builds` directory.
-- Format your guide using Markdown syntax.
-- Include images or diagrams as needed into the `docs/assets/images` directory.
-- Ensure your guide is clear, concise, and informative.
-- Submit a pull request to have your guide featured on our website.
+If you would like to contribute a build guide, or update an existing one, please visit the [how to contribute](https://chicagolandmesh.org/guides/builds/contributing/) page for instructions.
 
 ## Development
 
