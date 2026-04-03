@@ -2,7 +2,7 @@
 date:
   created: 2026-02-14
 categories:
-  - fixed
+  - Fixed
 authors:
   - obliqueyak
 ---

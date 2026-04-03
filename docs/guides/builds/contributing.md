@@ -32,7 +32,7 @@ If you would like to contribute with a new guide or an improvement to the existi
     date:
       created: 2026-03-31 # set to the current date (YYYY-MM-dd)
     categories:
-      - fixed # set based on what type of guide it is (fixed, mobile, or solar)
+      - Fixed # set based on what type of guide it is (Fixed, Mobile, or Solar)
     authors:
       - You # set your github username
     ---
@@ -79,7 +79,7 @@ If you would like to contribute with a new guide or an improvement to the existi
     date:
       created: 2026-03-31 # set to the current date (YYYY-MM-dd)
     categories:
-        - fixed # set based on what type of guide it is (fixed, mobile, or solar)
+        - Fixed # set based on what type of guide it is (Fixed, Mobile, or Solar)
     ---
     ```
 

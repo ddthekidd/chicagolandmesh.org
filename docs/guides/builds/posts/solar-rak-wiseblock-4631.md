@@ -2,7 +2,7 @@
 date:
   created: 2025-04-03
 categories:
-  - solar
+  - Solar
 authors:
   - dillon-conner
 ---
