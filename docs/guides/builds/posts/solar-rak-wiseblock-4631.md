@@ -2,7 +2,7 @@
 date:
   created: 2025-04-03
 categories:
-  - fixed
+  - solar
 authors:
   - dillon-conner
 ---
