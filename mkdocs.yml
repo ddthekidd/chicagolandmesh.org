@@ -49,6 +49,9 @@ plugins:
   - glightbox
   - minify:
       minify_html: true
+      htmlmin_opts:
+          remove_comments: true
+          remove_empty_space: true
   - blog:
       blog_dir: guides/builds
       archive: false
