@@ -1,58 +1,47 @@
 ---
-title: Guides
 hide: 
   - navigation
   - toc
 tags:
   - Info
-  - Getting Started
 ---
 
-<style>
-  /* force 2x2 grid */
-  .grid.cards {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
-  }
-  /* force builds icon size to be slightly larger and aligned properly */
-  .handheld {
-    --md-icon-size: 1.8em !important;
-    vertical-align: bottom !important;
-  }
-</style>
+# Guides
+
+Use this section to choose how you want to browse the site: start with community material, or jump directly into a protocol-specific section.
 
 <div class="grid cards" markdown>
 
--   :material-checkbox-multiple-marked-outline:{ .lg .middle } __Getting Started__
+-   :material-account-group:{ .lg .top } __Community__
 
     ---
 
-    Configure your node for the best possible optimizations.
+    Open build guides, build documentation, and contribution help for the community.
 
-    [:fontawesome-solid-angle-right: Customize](getting-started/index.md)
+    [:fontawesome-solid-angle-right: Open](community/index.md)
 
--   :material-radar:{ .lg .middle } __Local MQTT Setup__
-
-    ---
-
-    Properly setup MQTT on your node. Make sure to disable
-    downlink!
-
-    [:fontawesome-solid-angle-right: Learn how](mqtt.md)
-
--   :material-lock:{ .lg .middle } __Local Encrypted Channel Setup__
+-   :custom-meshtastic:{ .lg .top style="padding: 1px;" } __Meshtastic__
 
     ---
 
-    Learn how to join our local and secure mesh network!
+    Open Meshtastic guides covering setup, MQTT, local channel notes, and related documentation.
 
-    [:fontawesome-solid-angle-right: Setup now](local-channel.md)
+    [:fontawesome-solid-angle-right: Open](meshtastic/index.md)
 
--   :material-radio-handheld:{ .lg .handheld } __Builds__
+-   :material-access-point-network:{ .lg .top } __MeshCore__
 
     ---
 
-    Check out our community maintained build guides!
+    Open MeshCore guides and onboarding notes as this protocol section grows.
 
-    [:fontawesome-solid-angle-right: Check out](builds/index.md)
+    [:fontawesome-solid-angle-right: Open](meshcore/index.md)
+
+-   :material-lan:{ .lg .top } __Reticulum__
+
+    ---
+
+    Open Reticulum guides, references, and protocol-specific documentation.
+
+    [:fontawesome-solid-angle-right: Open](reticulum/index.md)
 
 </div>

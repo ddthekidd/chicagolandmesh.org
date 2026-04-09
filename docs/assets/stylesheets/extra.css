@@ -81,6 +81,23 @@ html {
     overscroll-behavior-y: none;
 }
 
+/* used for icon alignment */
+.md-typeset .top {
+    vertical-align: top;
+}
+/* custom icon alignment for material-radio-handheld */
+.handheld {
+  --md-icon-size: 1.8em !important;
+  vertical-align: bottom !important;
+}
+
+/* override default card grid to force 2x2 layout */
+.grid.cards {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+}
+.grid.cards.small {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+
 /* expand footer icons to full size */
 a[href="https://meshcore.io"].md-social__link {
     width: 5em;
@@ -93,4 +110,3 @@ a[href="https://reticulum.network"].md-social__link {
     padding: 0 0.25em;
     display: flex;
     align-items: center;
-}

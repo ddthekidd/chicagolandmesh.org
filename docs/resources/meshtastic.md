@@ -1,21 +1,35 @@
 ---
-title: Resources
+title: Meshtastic Resources
 hide: 
   - navigation
   - toc
 tags:
   - Info
+  - Meshtastic
 ---
 
-# Resources to check out
+# Meshtastic Resources
 
-<div class="grid cards" markdown>
+<div class="grid cards small" markdown>
 
-- [Chicagoland Mesh Github](https://github.com/chicagolandmesh/chicagolandmesh.org)
-  ![Link preivew](https://image.thum.io/get/width/700/maxAge/672/allowJPG/noanimate/http://github.com/chicagolandmesh/chicagolandmesh.org)
+-   [:custom-meshtastic:{ .lg .top style="padding: 1px;" } __Meshtastic Home__](https://meshtastic.org/)
 
-- [Official Meshtastic Website](https://meshtastic.org/)
-  ![Link preivew](https://image.thum.io/get/width/700/maxAge/672/allowJPG/noanimate/http://meshtastic.org/)
+    Official Meshtastic project site and primary entry point.
+
+    ![Link preivew](https://image.thum.io/get/width/700/maxAge/672/allowJPG/noanimate/http://meshtastic.org/)
+
+-   [:fontawesome-brands-github:{ .lg .top } __Meshtastic GitHub__](https://github.com/meshtastic)
+
+    Browse source code, releases, and project activity for Meshtastic.
+
+    ![Link preivew](https://image.thum.io/get/width/700/maxAge/672/allowJPG/noanimate/http://github.com/meshtastic)
+
+</div>
+
+
+## Other
+
+<div class="grid cards small" markdown>
 
 - [Awesome Meshtastic Github](https://github.com/ShakataGaNai/awesome-meshtastic/)
   ![Link preivew](https://image.thum.io/get/width/700/maxAge/672/allowJPG/noanimate/http://github.com/ShakataGaNai/awesome-meshtastic/)
@@ -43,7 +57,7 @@ tags:
 
 ## MQTT Related
 
-<div class="grid cards" markdown>
+<div class="grid cards small" markdown>
 
 - [MQTT MeshMap](https://meshmap.net/)
   ![Link preivew](https://image.thum.io/get/width/700/maxAge/672/allowJPG/noanimate/http://meshmap.net/)
@@ -62,7 +76,7 @@ tags:
 
 ## Tools and Apps
 
-<div class="grid cards" markdown>
+<div class="grid cards small" markdown>
 
 - [MeshSense](https://affirmatech.com/meshsense)
   ![Link preivew](https://image.thum.io/get/width/700/maxAge/672/allowJPG/noanimate/http://affirmatech.com/meshsense)

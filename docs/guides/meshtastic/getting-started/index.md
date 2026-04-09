@@ -3,6 +3,7 @@ title: Getting Started with Meshtastic
 tags:
   - Info
   - Getting Started
+  - Meshtastic
 ---
 
 # Getting Started with Meshtastic (915MHz, US)
@@ -16,7 +17,7 @@ To get started, you'll need the following:
 - **[Meshtastic-compatible device](https://meshtastic.org/docs/hardware/devices/)**: This could include devices like TTGO T-Beam, Heltec LoRa series, and other compatible ESP32 boards with LoRa radios.
 
 <figure markdown="span">
-  ![Example Nodes](../../assets/images/hamspiced-nodes.png)
+  ![Example Nodes](../../../assets/images/hamspiced-nodes.png)
   <figcaption><a href="https://github.com/Hamspiced">Image credit</a></figcaption>
 </figure>
 

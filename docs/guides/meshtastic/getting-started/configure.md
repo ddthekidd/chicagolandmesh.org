@@ -3,6 +3,7 @@ title: Configuring Meshtastic
 tags:
   - Info
   - Getting Started
+  - Meshtastic
 ---
 
 ### Initial Setup

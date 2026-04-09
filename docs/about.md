@@ -2,6 +2,8 @@
 tags:
   - Info
   - Getting Started
+  - Meshtastic
+  - MeshCore
 hide:
   - navigation
 ---
@@ -39,10 +41,10 @@ The purpose of Chicagoland Mesh is to expand coverage in our area and build out 
 
 !!! warning
 
-    Make sure to look into the [mistakes to avoid](guides/getting-started/avoid-mistakes.md) page to avoid common pitfalls
+    Make sure to review the [common setup pitfalls](guides/meshtastic/getting-started/avoid-mistakes.md) before you begin.
 
 1. Join [our Discord](https://chicagolandmesh.org/discord) to get to know us
 2. Purchase [supported hardware](https://meshtastic.org/docs/hardware/devices) and [antenna](https://meshtastic.org/docs/hardware/antennas)
 3. [Flash](https://flasher.meshtastic.org) your hardware with the Meshtastic firmware
 4. Download the [iOS](https://apps.apple.com/us/app/meshtastic/id1586432531) or [Android](https://play.google.com/store/apps/details?id=com.geeksville.mesh) app & connect to your node
-5. Read the [getting started](https://chicagolandmesh.org/guides/getting-started) page for more information
+5. Read the [getting started](guides/meshtastic/getting-started/index.md) page for more information

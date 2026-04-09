@@ -14,16 +14,39 @@ nav:
   - About: about.md
   - Guides:
     - guides/index.md
-    - Getting Started:
-      - guides/getting-started/index.md
-      - Configuring Meshtastic: guides/getting-started/configure.md
-      - Mistakes to Avoid: guides/getting-started/avoid-mistakes.md
-    - Setup MQTT: guides/mqtt.md
-    - Local Channel: guides/local-channel.md
-    - Builds:
-      - guides/builds/index.md
-      - Contributing: guides/builds/contributing.md
-  - News: news.md
+    - Community:
+      - guides/community/index.md
+      - Builds:
+          - guides/community/builds/index.md
+      - Contributing: guides/community/contributing.md
+    - Meshtastic:
+      - guides/meshtastic/index.md
+      - Getting Started:
+        - guides/meshtastic/getting-started/index.md
+        - Configuring Meshtastic: guides/meshtastic/getting-started/configure.md
+        - Mistakes to Avoid: guides/meshtastic/getting-started/avoid-mistakes.md
+      - Setup MQTT: guides/meshtastic/mqtt.md
+      - Local Channel: guides/meshtastic/local-channel.md
+    - MeshCore:
+      - guides/meshcore/index.md
+      - Getting Started:
+        - guides/meshcore/getting-started/index.md
+        - Configuring MeshCore: guides/meshcore/getting-started/configure.md
+        - Mistakes to Avoid: guides/meshcore/getting-started/avoid-mistakes.md
+    - Reticulum:
+      - guides/reticulum/index.md
+      - Getting Started:
+        - guides/reticulum/getting-started/index.md
+        - Configuring Reticulum: guides/reticulum/getting-started/configure.md
+        - Mistakes to Avoid: guides/reticulum/getting-started/avoid-mistakes.md
+  - Resources:
+    - resources/index.md
+    - Community: resources/community.md
+    - Meshtastic: resources/meshtastic.md
+    - MeshCore: resources/meshcore.md
+    - Reticulum: resources/reticulum.md
+  # TODO: maybe
+  # - News: news.md
   - Map: map.md
   - MeshView:
     - meshview/index.md
@@ -36,7 +59,6 @@ nav:
     - View Externally: https://meshview.chicagolandmesh.org
   # TODO: gallery
   # - Gallery: gallery/index.md
-  - Resources: resources.md
   - Neighboring Networks: neighbors.md
   - Contact: contact.md
 
@@ -54,7 +76,7 @@ plugins:
           remove_comments: true
           remove_empty_space: true
   - blog:
-      blog_dir: guides/builds
+      blog_dir: guides/community/builds
       archive: false
 
 markdown_extensions:

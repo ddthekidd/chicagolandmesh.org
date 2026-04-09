@@ -17,7 +17,7 @@ The build guides are split into three categories: Fixed, Mobile, and Solar. Each
 
 <div class="grid cards" markdown>
 
--   :material-crosshairs-gps:{ .lg .middle } __Fixed__
+-   :material-crosshairs-gps:{ .lg .top } __Fixed__
 
     ---
 
@@ -25,7 +25,7 @@ The build guides are split into three categories: Fixed, Mobile, and Solar. Each
 
     [:fontawesome-solid-angle-right: View](category/fixed.md)
 
--   :material-cellphone-text:{ .lg .middle } __Mobile__
+-   :material-cellphone-text:{ .lg .top } __Mobile__
 
     ---
 
@@ -34,7 +34,7 @@ The build guides are split into three categories: Fixed, Mobile, and Solar. Each
 
     [:fontawesome-solid-angle-right: View](category/mobile.md)
 
--   :material-solar-power-variant:{ .lg .middle } __Solar__
+-   :material-solar-power-variant:{ .lg .top } __Solar__
 
     ---
 
@@ -44,12 +44,3 @@ The build guides are split into three categories: Fixed, Mobile, and Solar. Each
     [:fontawesome-solid-angle-right: View](category/solar.md)
 
 </div>
-
-## [How to Contribute](contributing.md)
-
-If you would like to contribute with a new guide or an improvement to the existing ones, please follow these steps:
-
-[Continue reading](contributing.md)
-
-<hr>
-<br>

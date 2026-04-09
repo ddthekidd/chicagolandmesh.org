@@ -3,14 +3,16 @@ title: MQTT
 tags:
   - MQTT
   - Info
+  - Meshtastic
 ---
+
 # Setting up MQTT for your node
 
 ## What is MQTT?
 MQTT stands for Message Queuing Telemetry Transport. It is a protocol that has been integrated into Meshtastic to allow nodes to relay messages over the internet. This allows nodes to bridge where physically they couldn't have. 
 
 <figure markdown="span">
-  ![MQTT Example](../assets/images/mqtt-example.webp){ data=round }
+  ![MQTT Example](../../assets/images/mqtt-example.webp){ data=round }
   <figcaption><a href="https://meshtastic.org/docs/software/integrations/mqtt/">Image source</a></figcaption>
 </figure>
 
@@ -23,7 +25,7 @@ Enabling MQTT will allow you to appear on [Liam Cottle MeshMap](https://meshtast
 4. Use `large4cats` for MQTT password
 
     <br>
-    ![MQTT Settings Example](../assets/images/mqtt1.png)
+    ![MQTT Settings Example](../../assets/images/mqtt1.png)
     <br>
     <br>
 
@@ -38,7 +40,7 @@ Enabling MQTT will allow you to appear on [Liam Cottle MeshMap](https://meshtast
 8. If you are using Wi-Fi, set Proxy to Client off, if you are using a phone, turn on Proxy to Client
 
     <br>
-    ![MQTT Settings Example](../assets/images/mqtt2.png)
+    ![MQTT Settings Example](../../assets/images/mqtt2.png)
     <br>
     <br>
 
@@ -50,7 +52,7 @@ Enabling MQTT will allow you to appear on [Liam Cottle MeshMap](https://meshtast
 13. Enable Map Reporting, set Map Publish Interval to 3600 (seconds), and set your desired Position Precision
 
     <br>
-    ![MQTT Settings Example](../assets/images/mqtt3.png)
+    ![MQTT Settings Example](../../assets/images/mqtt3.png)
 
 ### Optional Settings
 

@@ -1,8 +1,9 @@
 ---
-title: Local Channel
 tags:
   - Info
+  - Meshtastic
 ---
+
 # Local Encrypted Channel Configuration
 Adding the following configuration to your node allows it to communicate encrypted messages over our local channel.
 
@@ -19,4 +20,4 @@ Adding the following configuration to your node allows it to communicate encrypt
 
 5. Disable MQTT uplink and downlink
 
-![Local Channel Settings Example](../assets/images/mqtt4.png)
+![Local Channel Settings Example](../../assets/images/mqtt4.png)
