@@ -130,7 +130,13 @@ extra:
     - icon: custom/meshtastic
       link: https://meshtastic.org
       name: Check out the official Meshtastic site!
-    - icon: "fontawesome/brands/github"
+    - icon: custom/meshcore
+      link: https://meshcore.io
+      name: Check out the official MeshCore site!
+    - icon: custom/reticulum-short
+      link: https://reticulum.network
+      name: Check out the official Reticulum site!
+    - icon: fontawesome/brands/github
       link: https://github.com/chicagolandmesh/chicagolandmesh.org
       name: Contribute to the github!
     - icon: fontawesome/brands/discord

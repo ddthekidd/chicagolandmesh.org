@@ -80,3 +80,17 @@
 html {
     overscroll-behavior-y: none;
 }
+
+/* expand footer icons to full size */
+a[href="https://meshcore.io"].md-social__link {
+    width: 5em;
+    padding: 0 0.25em;
+    display: flex;
+    align-items: center;
+}
+a[href="https://reticulum.network"].md-social__link {
+    width: 3em;
+    padding: 0 0.25em;
+    display: flex;
+    align-items: center;
+}
