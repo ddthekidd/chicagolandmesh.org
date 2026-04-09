@@ -112,3 +112,8 @@ a[href="https://reticulum.network"].md-social__link {
     display: flex;
     align-items: center;
 }
+
+/* fix webkit bug: https://stackoverflow.com/questions/47275700/align-items-center-makes-img-disappear */
+.md-social__link svg {
+    height: 100%;
+}
