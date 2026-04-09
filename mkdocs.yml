@@ -37,6 +37,7 @@ nav:
   # TODO: gallery
   # - Gallery: gallery/index.md
   - Resources: resources.md
+  - Neighboring Networks: neighbors.md
   - Contact: contact.md
 
 hooks:
