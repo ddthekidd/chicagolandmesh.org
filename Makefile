@@ -4,6 +4,7 @@
 
 .PHONY: dev
 dev: build/pmtiles build/map/assets
+	@if [[ ! -e ".env" ]]; then cp .example.env .env; fi
 	docker compose up -d
 	docker compose logs -f
 

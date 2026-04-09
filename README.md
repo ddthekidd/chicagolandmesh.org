@@ -23,7 +23,7 @@ If you would like to contribute a build guide, or update an existing one, please
 
 ## Development
 
-Use `make build/site` to build the static site into the `dist` directory and `make dev` to start up the development server in docker.
+To start the live development environment, run `make dev` from the project root, or run `make dev/site` to skip downloading map assets, which can take some time depending on your internet connection. This requires [Docker](https://www.docker.com/get-started/) to be installed, and the full development environment also requires [Go](https://go.dev/doc/install).
 
 ## License
 
