@@ -22,4 +22,4 @@ This page is the placeholder landing page for Reticulum onboarding. Use it for t
 - Open the [Mistakes to Avoid](avoid-mistakes.md) placeholder for common issues to document later.
 
 <br>
-If you would like to contribute to this page, please open an issue or pull request on our [GitHub repository](https://github.com/chicagolandmesh.org/chicagolandmesh).
+If you would like to contribute to this page, please open an issue or pull request on our [GitHub repository](https://github.com/chicagolandmesh/chicagolandmesh.org).
