@@ -9,7 +9,7 @@ tags:
 
 # MeshCore
 
-This section is reserved for MeshCore-specific guides, resources, and community practices.
+This section contains documentation that is specific to MeshCore hardware, firmware, tools, and operating patterns.
 
 <div class="grid cards" markdown>
 
@@ -17,15 +17,23 @@ This section is reserved for MeshCore-specific guides, resources, and community 
 
     ---
 
-    Start the MeshCore section with onboarding notes, first steps, and setup placeholders.
+    Get started with MeshCore, learn the first steps to get started, and begin configuring your node to align with the local mesh.
 
     [:fontawesome-solid-angle-right: Open](getting-started/index.md)
 
+-   :material-radar:{ .lg .top } __MQTT__
+
+    ---
+
+    Configure MQTT connectivity and align your node with local mesh expectations.
+
+    [:fontawesome-solid-angle-right: Open](mqtt.md)
+    
 -   :material-bookshelf:{ .lg .top } __Resources__
 
     ---
 
-    Browse MeshCore-specific references, project links, and community tools.
+    Browse MeshCore specific references, project links, and community tools.
 
     [:fontawesome-solid-angle-right: Open](../../resources/meshcore.md)
 
