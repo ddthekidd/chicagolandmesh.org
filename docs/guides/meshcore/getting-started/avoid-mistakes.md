@@ -1,5 +1,4 @@
 ---
-title: Avoid these mistakes
 tags:
   - Info
   - Getting Started

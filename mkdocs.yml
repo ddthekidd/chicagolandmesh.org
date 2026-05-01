@@ -33,6 +33,7 @@ nav:
         - guides/meshcore/getting-started/index.md
         - Configuring MeshCore: guides/meshcore/getting-started/configure.md
         - Mistakes to Avoid: guides/meshcore/getting-started/avoid-mistakes.md
+      - Setup MQTT: guides/meshcore/mqtt.md
     - Reticulum:
       - guides/reticulum/index.md
       - Getting Started:

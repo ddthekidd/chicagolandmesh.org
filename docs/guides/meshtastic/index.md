@@ -25,7 +25,7 @@ This section contains documentation that is specific to Meshtastic hardware, fir
 
     ---
 
-    Configure MQTT connectivity and align your node with local mesh expectations.
+    Configure MQTT connectivity to help visualize the network across the mesh.
 
     [:fontawesome-solid-angle-right: Open](mqtt.md)
 
