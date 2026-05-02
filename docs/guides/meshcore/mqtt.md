@@ -5,7 +5,7 @@ tags:
   - MeshCore
 ---
 
-# Setting up a MeshCore Observer
+# EXAMPLE!!
 
 ## What is a MeshCore Observer?
 
