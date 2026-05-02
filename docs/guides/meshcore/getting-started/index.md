@@ -104,5 +104,5 @@ If you need assistance with the MeshCore:
 Once you have your MeshCore device connected:
 
 - Check out [Configure](configure.md) page
-- Check out [Configure MQTT](mqtt.md) page
+- Check out [Configure MQTT](../mqtt.md) page
 - Check out [Mistakes to Avoid](avoid-mistakes.md) page
